@@ -14,13 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\Discografi;
+use App\Http\Controllers\Register;
+use App\Http\Controllers\Manage;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Discografi::class,'index'] );
 
-Route::get('/discografi', [Discografi::class,'index'] );
+Route::get('/cadastro', [Register::class,'index'] );
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/administra', [Manage::class,'index'] );
