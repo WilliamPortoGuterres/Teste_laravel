@@ -20,5 +20,6 @@ use App\Http\Controllers\Manage;
 Route::get('/', [Discografi::class,'index'] );
 
 Route::get('/cadastro', [Register::class,'index'] );
+Route::post('/cadastro/store', [Register::class,'store'] );
 
 Route::get('/administra', [Manage::class,'index'] );

@@ -6,9 +6,9 @@
 @section('content')
     
 
-<form action="#" method="get">
-
-<input type="text" name="" id="">
+<form action="/cadastro/store" method="post">
+@csrf
+<input type="text" name="nome" id="nome">
 <button class="btn btn-primary" type="submit">primary</button>
 dohgaerçkdghaodgvh
 </form>
