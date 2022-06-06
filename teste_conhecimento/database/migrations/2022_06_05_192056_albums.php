@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->string('ano');
+            $table->string('nome',100);
+            $table->string('ano',4);
             $table->timestamps();
+            $table->unsignedBigInteger('id_musicas');
+           // $table->foreign('id_musicas')->references('id')->on('musicas')->onDelete('set null');
         });
     }
 

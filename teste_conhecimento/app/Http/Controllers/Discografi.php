@@ -10,8 +10,19 @@ class Discografi extends Controller
 {
     public function index(){
 
-            $albums= Album::all();
+$search = request('search');
 
-        return view('discografi',['albums'=>$albums]);
+        if($search)
+        {
+            $albums= Album::where([['nome','like','%'.$search.'%']])->get();
+        }
+            else
+            {
+
+                
+                $albums= Album::all();
+            }
+
+        return view('discografi',['albums'=>$albums,'search'=>$search]);
     }
 }

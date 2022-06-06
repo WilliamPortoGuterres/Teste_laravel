@@ -19,6 +19,9 @@
                 <a class="navbar-brand" href="/">
                     <img src="./imagens/logo.png" width="140px" height="50%" class="d-inline-block align-top" alt="">
                 </a>
+                @if (session('msg'))
+                    <p>{{session('msg')}}</p>
+                @endif
                 <p class="ml-0"> @yield('title')</p>
             </nav>
                 <div class="contentBlade ml-5 mr-5">
